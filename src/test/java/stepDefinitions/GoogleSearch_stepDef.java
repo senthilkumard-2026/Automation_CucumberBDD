@@ -10,16 +10,16 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
-import hooks.HooksFile;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import utils.DriverManager;
 
 public class GoogleSearch_stepDef  {
 
-	WebDriver driver = HooksFile.driver;
-	WebDriverWait wait = HooksFile.wait;
-	String url = HooksFile.url;
+	WebDriver driver = DriverManager.getDriver();
+	WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+	String url = "https://www.google.com/";
 	
 	@Given("user can able to navigates into google website")
 	public void user_can_able_to_navigates_into_google_website() {
