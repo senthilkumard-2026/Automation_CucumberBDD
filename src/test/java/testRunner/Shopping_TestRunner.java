@@ -5,11 +5,13 @@ import io.cucumber.testng.CucumberOptions;
 
 @CucumberOptions
 (
-		features = {"src/test/resources/features/DemoWebShop.feature"}, 
+		features = {"src/test/resources/features/shoppingCart.feature"}, 
         glue = {"stepDefinitions","hooks"}, 
         dryRun = false, 
         monochrome = true,
         plugin = {"pretty","html:target/cucumber-html-report.html"})
-public class DemoWebShop_Runner extends AbstractTestNGCucumberTests{
+public class Shopping_TestRunner extends AbstractTestNGCucumberTests{
 
+	
+	
 }
