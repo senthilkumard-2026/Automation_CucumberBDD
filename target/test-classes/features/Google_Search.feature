@@ -14,3 +14,4 @@ Examples:
 |Oneplus phones|Oneplus phones - Google Search|
 |Oneplus phones_sh|Oneplus phones - Google Search|
 |Oneplus phones_sh1|Oneplus phones - Google Search|
+|Oneplus phones_sh1|Oneplus phones - Google Search|
