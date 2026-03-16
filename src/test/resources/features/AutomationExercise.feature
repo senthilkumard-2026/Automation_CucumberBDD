@@ -10,3 +10,7 @@ Scenario: Register User Test case
 	And User enters the name and email address 
 	And User clicks the Signup button 
 	Then User verifies that 'ENTER ACCOUNT INFORMATION' is visible 
+<<<<<<< HEAD
+=======
+	
+>>>>>>> eac79a0 (Added changes in features)
