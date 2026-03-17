@@ -30,10 +30,10 @@ public class RegisterUserPage {
 	WebElement NewSignUpTitle;
 
 	@FindBy(xpath = "//input[@placeholder='Name']")
-	WebElement signupName;
+	WebElement nameField;
 
 	@FindBy(xpath = "//input[@placeholder='Email Address' and @data-qa='signup-email']")
-	WebElement signupEmail;
+	WebElement emailField;
 
 	@FindBy(xpath = "//button[@data-qa='signup-button']")
 	WebElement signupButton;
@@ -43,7 +43,73 @@ public class RegisterUserPage {
 
 	@FindBy(xpath = "//a[text()=' Home']")
 	WebElement HomePageLink;
-	
+
+	@FindBy(id = "id_gender1")
+	WebElement titleMr;
+
+	@FindBy(id = "id_gender2")
+	WebElement titleMrs;
+
+	@FindBy(id = "password")
+	WebElement password;
+
+	@FindBy(id = "days")
+	WebElement day;
+
+	@FindBy(id = "months")
+	WebElement month;
+
+	@FindBy(id = "years")
+	WebElement year;
+
+	@FindBy(id = "newsletter")
+	WebElement newsletter;
+
+	@FindBy(id = "optin")
+	WebElement offers;
+
+	@FindBy(id = "first_name")
+	WebElement firstname;
+
+	@FindBy(id = "last_name")
+	WebElement lastname;
+
+	@FindBy(id = "address1")
+	WebElement address;
+
+	@FindBy(id = "country")
+	WebElement country;
+
+	@FindBy(id = "state")
+	WebElement state;
+
+	@FindBy(id = "city")
+	WebElement city;
+
+	@FindBy(id = "zipcode")
+	WebElement zipcode;
+
+	@FindBy(id = "mobile_number")
+	WebElement mobilenumber;
+
+	@FindBy(xpath = "//button[text()='Create Account']")
+	WebElement createAccount;
+
+	@FindBy(xpath = "//a[text()='Continue']")
+	WebElement continueBtn;
+
+	@FindBy(xpath = "//a[text()=' Delete Account']")
+	WebElement deleteAccount;
+
+	@FindBy(xpath = "//h2[@data-qa='account-created']//b")
+	WebElement accountCrtMsg;
+
+	@FindBy(xpath = "//a[contains(text(),'Logged in as')]")
+	WebElement loggedInUser;
+
+	@FindBy(xpath = "//h2[@data-qa='account-deleted']//b")
+	WebElement accountDeletedMsg;
+
 	// Methods
 
 	public void openUrl(String url) {
@@ -67,11 +133,11 @@ public class RegisterUserPage {
 	}
 
 	public void enterSignupName(String name) {
-		signupName.sendKeys(name);
+		nameField.sendKeys(name);
 	}
 
 	public void enterSignupEmail(String mail) {
-		signupEmail.sendKeys(mail);
+		emailField.sendKeys(mail);
 	}
 
 	public void clickSignUpButton() {
@@ -84,6 +150,61 @@ public class RegisterUserPage {
 		WebElement message = wait.until(ExpectedConditions.visibilityOf(enterAccountInfoMsg));
 
 		return message.getText();
+	}
+
+	public void fillAccountDetails(String pass, String datePas, String monthPas, String yearPas) {
+		titleMr.click();
+		password.sendKeys(pass);
+		day.sendKeys(datePas);
+		month.sendKeys(monthPas);
+		year.sendKeys(yearPas);
+
+	}
+
+	public void selectNewsLetter() {
+		newsletter.click();
+	}
+
+	public void selectOffers() {
+		offers.click();
+	}
+
+	public void fillAddress(String fstName, String lstName, String add, String coun, String st, String cty,
+			String zpCode, String mbl) {
+
+		firstname.sendKeys(fstName);
+		lastname.sendKeys(lstName);
+		address.sendKeys(add);
+		country.sendKeys(coun);
+		state.sendKeys(st);
+		city.sendKeys(cty);
+		zipcode.sendKeys(zpCode);
+		mobilenumber.sendKeys(mbl);
+	}
+
+	public void clickCreateAccount() {
+		createAccount.click();
+	}
+
+	public void clickContinue() {
+		continueBtn.click();
+	}
+
+	public void deleteAccount() {
+		deleteAccount.click();
+	}
+
+	public String accountCreatedMessage() {
+		return accountCrtMsg.getText();
+	}
+
+	public boolean verifyLoggedInMessage(String message) {
+
+		return loggedInUser.isDisplayed();
+	}
+
+	public String accountDeletedMessage() {
+		return accountDeletedMsg.getText();
 	}
 
 }
