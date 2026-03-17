@@ -11,4 +11,11 @@ Examples:
 |product_name|Expected_product_result|
 |Samsung phones|Samsung phones - Google Search|
 |Iphone phones|Iphone phones - Google Search|
+<<<<<<< HEAD
 |Oneplus phones|Oneplus phones - Google Search|
+=======
+|Oneplus phones|Oneplus phones - Google Search|
+|Oneplus phones_sh|Oneplus phones - Google Search|
+|Oneplus phones_sh1|Oneplus phones - Google Search|
+|Oneplus phones_sh1|Oneplus phones - Google Search|
+>>>>>>> 7aa53a5d49d77ee8fd01aa264c624b5b08dc82ee
