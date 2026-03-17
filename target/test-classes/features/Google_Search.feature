@@ -12,5 +12,3 @@ Examples:
 |Samsung phones|Samsung phones - Google Search|
 |Iphone phones|Iphone phones - Google Search|
 |Oneplus phones|Oneplus phones - Google Search|
-|Oneplus phones_sh|Oneplus phones - Google Search|
-|Oneplus phones_sh1|Oneplus phones - Google Search|
